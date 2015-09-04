@@ -9,7 +9,6 @@
     function OrdersController() {
     console.log('in orders');
             var vm = this;
-            console.log('in the controller');
             vm.title = "Customer Orders";
         
     }
