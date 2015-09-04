@@ -1,0 +1,33 @@
+<div class="row" >
+
+  <div class="panel panel-primary">
+
+    <div class="panel-heading">
+      Customer List
+    </div>
+
+    <div class="panel-body">
+      Filter: <input type="text" ng-model="customerFilter">
+    </div>
+
+    <table class="table table-striped table-responsive">
+      <tr>
+        <th ng-click="ctrl.doSort('name')">Name</th>
+        <th ng-click="ctrl.doSort('city')">City</th>
+        <th ng-click="ctrl.doSort('orderTotal')">order total</th>
+        <th ng-click="ctrl.doSort('joined')">joined</th>
+      </tr>
+
+      <tr data-ng-repeat = "cust in ctrl.customers |filter: customerFilter| orderBy:ctrl.sortBy:ctrl.reverse">
+        <td>{{cust.name | uppercase}}</td>
+        <td>{{cust.city}}</td>
+        <td>{{cust.orderTotal | currency}}</td>
+        <td>{{cust.joined |date}}</td>
+      </tr>
+
+    </table>
+    
+  </div>
+    <span>Total customers: {{ctrl.customers.length}}</span>
+
+</div>

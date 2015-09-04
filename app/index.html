@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="./bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+
+      <div class="container">
+        <h2>hello</h2>
+        <div ui-view></div>
+      </div> 
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+    <script type="text/javascript" src='./bower_components/angular-ui-router/release/angular-ui-router.js'></script>
+
+    <script src="./bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+    <script src="./bower_components/moment/moment.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/toastr/toastr.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+<!-- end of bower -->
+    <script src="main.js"></script>
+    <script type="text/javascript" src="./components/customers/customers.module.js"></script>
+    <script type="text/javascript" src="./components/orders/orders.module.js"></script>
+   <!--  <script type="text/javascript" src="./core/core.module.js"></script> -->
+
+    <!-- modules -->
+    <!-- build  inject -->
+    <script type="text/javascript" src="./components/customers/customersController.js"></script>
+    <script type="text/javascript" src="./components/customers/customers.route.js"></script>
+    <script type="text/javascript" src="./components/orders/ordersController.js"></script>
+    <script type="text/javascript" src="./components/orders/orders.route.js"></script>
+  <!--   <script src="./core/config.js"></script>
+    <script src="./core/constants.js"></script>
+    <script src="./core/core.route.js"></script> -->
+  </body>
+</html>
