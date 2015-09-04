@@ -8,7 +8,7 @@
         function config($stateProvider) {
             $stateProvider
                 .state('orders',{
-                    url:'/orders', 
+                    url:'/orders:customerId', 
                     templateUrl: './components/orders/orders.html',
                     controller: 'OrdersController',
                     controllerAs: 'ctrl'

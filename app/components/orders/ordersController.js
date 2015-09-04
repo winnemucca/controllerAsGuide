@@ -6,7 +6,7 @@
 
     // MainController.$inject = [ 'SessionService'];
 
-    function OrdersController() {
+    function OrdersController($stateParams) {
     console.log('in orders');
             var vm = this;
             vm.title = "Customer Orders";
