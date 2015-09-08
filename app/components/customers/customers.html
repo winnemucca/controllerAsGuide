@@ -16,6 +16,7 @@
         <th ng-click="ctrl.doSort('city')">City</th>
         <th ng-click="ctrl.doSort('orderTotal')">order total</th>
         <th ng-click="ctrl.doSort('joined')">joined</th>
+        <th>&nbsp;</th>
       </tr>
 
       <tr data-ng-repeat = "cust in ctrl.customers |filter: customerFilter| orderBy:ctrl.sortBy:ctrl.reverse">
@@ -23,6 +24,8 @@
         <td>{{cust.city}}</td>
         <td>{{cust.orderTotal | currency}}</td>
         <td>{{cust.joined |date}}</td>
+        <!-- <td><a ui-sref="orders({{ ctrl.cust.id }})">View Orders</a></td> -->
+        <td><a ui-sref="orders({customerId: cust.id})">View Orders</a></td>
       </tr>
 
     </table>

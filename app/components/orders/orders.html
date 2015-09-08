@@ -1,4 +1,20 @@
-<div>
-	<h1>Orders{{ctrl.title}}</h1>
+<div class="row">
+	<h2>{{ctrl.customer.name}}'s Orders</h2>
+
+	<div class="panel panel-primary">
+		<table class="table">
+			<tr>
+				<th> Product</th>
+				<th> Total</th>
+
+			</tr>
+
+			<tr ng-repeat = "order in ctrl.customer.orders">
+				<td>{{order.product}}</td>
+				<td>{{order.total |currency}}</td>
+
+			</tr>
+		</table>	
+	</div>
 
 </div>

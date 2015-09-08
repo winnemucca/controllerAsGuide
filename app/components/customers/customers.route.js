@@ -1,3 +1,5 @@
+// (function() {
+//         'use strict';
 (function() {
         'use strict';
         
@@ -6,42 +8,23 @@
             .config(config);
 
         function config($stateProvider) {
-        console.log('customers route')
             $stateProvider
                 .state('customers',{
-                    url:'/customers', 
-                    templateUrl: './components/customers/customers.html',
-                    controller: 'CustomerController',
-                    controllerAs: 'ctrl'
+                    url:'/customers',
+                    // params:{customerId: null}, 
+                    views: {
+                        "main@": {
+                            templateUrl: './components/customers/customers.html',
+                            controller: 'CustomerController',
+                            controllerAs: 'ctrl'
+                        }
+                    }
+                    // resolve: {
+                    //     customerId: ['$stateParams', function($stateParams) {
+                    //         return $stateParams.customerId;
+                    //     }]
+                    // }
             })
         };
     
 })();
-
-// (function() {
-//     'use strict';
-
-//     angular
-//         .module('app.customers')
-//         .run(appRun);
-
-//     appRun.$inject = ['routerHelper'];
-//     /* @ngInject */
-//     function appRun(routerHelper) {
-//         routerHelper.configureStates(getStates());
-//     }
-
-//     function getStates() {
-//         return [
-            // {
-                // state: 'customers',
-                // config: {
-                //     url: '/customers',
-                //     templateUrl: 'app/components/customers/customers.html',
-                //     controller: 'CustomerController',
-                //     controllerAs: 'ctrl'                  
-//                 }
-//             }
-//         ];
-//     }
-// })();
