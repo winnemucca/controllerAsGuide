@@ -41,25 +41,3 @@
 // AIzaSyDrrOoU-7Xdf6RDmthDxtfDD_wO99Q4CEI
     
 
-
-
- //     vm.customers = [];
-        //     vm.orders = null;
-        //     // table sorting
-        //     vm.sortBy = 'name';
-        //     vm.reverse = false;
-        //     vm.doSort = doSort;
-
-        //     function init() {
-        //         console.log(customersFactory.getCustomers())
-        //         vm.customers = customersFactory.getCustomers();
-        //         console.log('activated', vm.customers)
-        //         return vm.customers;
-        //     }
-        //     init();
-            
-        // // // customerId comes from url param
-        //     function doSort(propName) {
-        //         vm.sortBy=propName;
-        //         vm.reverse=!vm.reverse
-        //     }
