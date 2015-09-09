@@ -36,12 +36,12 @@
                     url:'/customers:customerId', 
                     templateUrl: './components/orders/orders.html',
                     controller: 'OrdersController',
-                    controllerAs: 'ctrl'
-                    // resolve: {
-                    //     customerId:[ '$stateParams','customerFactory', function( $stateParams, customerFactory) {
-                    //         return customerFactory.getCustomers($stateParams.id);
-                    //     }]
-                    // }
+                    controllerAs: 'ctrl',
+                    resolve: {
+                        customerId: function( $stateParams, customerFactory) {
+                            return customerFactory.getCustomers();
+                        }
+                    }
             })
         };
 })();
