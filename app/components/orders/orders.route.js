@@ -13,14 +13,17 @@
                     controller: 'OrdersController',
                     controllerAs: 'ctrl',
                     resolve: {
-                       customerInfo: customerInfo  
+                       customerInfo: customerInfo,
+
                     }
             });
         }
 
         function customerInfo( customersFactory, $stateParams) {
+                console.log($stateParams);
                 return customersFactory.getCustomer($stateParams.customerId);
         }
+
 })();
 
 

@@ -8,11 +8,15 @@
 				<th> Total</th>
 
 			</tr>
-
+<!-- 
 			<tr ng-repeat = "order in ctrl.customer.orders">
 				<td>{{order.product}}</td>
 				<td>{{order.total |currency}}</td>
 
+			</tr> -->
+			<tr>
+				<td>{{ctrl.total}}</td>
+				<td>{{ctrl.total}}</td>
 			</tr>
 		</table>	
 		<pre>{{ctrl.customer |json}}</pre>

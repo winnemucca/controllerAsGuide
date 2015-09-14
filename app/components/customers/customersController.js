@@ -14,8 +14,6 @@
             vm.reverse = false;
             vm.doSort = doSort;
 
-            console.log('customerList',customerList);
-
             getCustomersList();
 
             function getCustomersList() {
