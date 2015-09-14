@@ -20,7 +20,6 @@
         }
 
         function customerInfo( customersFactory, $stateParams) {
-                console.log($stateParams);
                 return customersFactory.getCustomer($stateParams.customerId);
         }
 

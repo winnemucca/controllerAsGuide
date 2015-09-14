@@ -34,9 +34,8 @@
                 console.log('promise id',id);
                 var data = response.data;
                 for(var i =0, len=data.length;i<len;i++) {
-                    console.log('data[i].id',data[i].id);
+                   
                     if(data[i].id === parseInt(id)) {
-                        console.log('data[i]', data[i]);
                         return data[i];
                     }
                 }
