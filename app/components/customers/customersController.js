@@ -5,7 +5,7 @@
         .module('app.customers')
         .controller('CustomerController', CustomerController);
 
-        function CustomerController($stateParams, customersFactory) {
+        function CustomerController($stateParams, customerList) {
             var vm = this;
             vm.customers = [];
             vm.orders = null;
@@ -14,19 +14,12 @@
             vm.reverse = false;
             vm.doSort = doSort;
 
-            activate()
-            function activate() {
-                return getCustomersList().then(function() {
-                    console.log('activated')
-                });
-            }
+            console.log('customerList',customerList);
+
+            getCustomersList();
 
             function getCustomersList() {
-                return customersFactory.getCustomers()
-                    .then(function(data) {
-                        vm.customers = data;
-                        return vm.customers;
-                    });
+                vm.customers = customerList;
             }
 
             function doSort(propName) {

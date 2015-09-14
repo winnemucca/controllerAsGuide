@@ -4,11 +4,11 @@
         .module('app.orders')
         .controller('OrdersController', OrdersController);
 
-    function OrdersController($stateParams, customerId) {
-        console.log('in');
+    function OrdersController($stateParams, customerInfo) {
+        console.log('in', $stateParams);
             var vm = this;
-            vm.title = "Customer Orders";
-            vm.customer = null;
+            vm.title = "Customer Orders " + $stateParams.customerId;
+            vm.customer = customerInfo;
     }
 }());
 

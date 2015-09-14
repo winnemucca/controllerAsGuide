@@ -1,5 +1,5 @@
 <div class="row">
-	<h2>{{ctrl.customer.name}}'s Orders</h2>
+	<h2>{{ctrl.customer.customerId}}'s Orders</h2>
 
 	<div class="panel panel-primary">
 		<table class="table">
@@ -15,6 +15,7 @@
 
 			</tr>
 		</table>	
+		<pre>{{ctrl.customer |json}}</pre>
 	</div>
 
 </div>
