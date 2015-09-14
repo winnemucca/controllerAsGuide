@@ -1,21 +1,15 @@
 <div class="row">
-	<h2>{{ctrl.customer.customerId}}'s Orders</h2>
+	<h2>{{ctrl.customer}}'s Orders</h2>
 
 	<div class="panel panel-primary">
 		<table class="table">
 			<tr>
 				<th> Product</th>
 				<th> Total</th>
-
 			</tr>
-<!-- 
-			<tr ng-repeat = "order in ctrl.customer.orders">
-				<td>{{order.product}}</td>
-				<td>{{order.total |currency}}</td>
 
-			</tr> -->
 			<tr>
-				<td>{{ctrl.total}}</td>
+				<td>{{ctrl.product}}</td>
 				<td>{{ctrl.total}}</td>
 			</tr>
 		</table>	

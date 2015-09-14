@@ -6,16 +6,14 @@
 
     function OrdersController($stateParams, customerInfo) {
         console.log('customerInfo',customerInfo)
-        console.log(customerInfo.name);
-        console.log(customerInfo.city);
-        console.log(customerInfo.orderTotal);
-        // vm.total = customerInfo.orderTotal;
+        console.log('stateparams', $stateParams)
+        console.log('total',customerInfo.orderTotal);
+        console.log('orders',customerInfo.orders[0].product);
 
-
-        console.log('in', $stateParams.customerId);
-            var vm = this;
-            vm.title = "Customer Orders " + $stateParams.customerId;
-            vm.customer = $stateParams.customerId;
+        var vm = this;
+        vm.product = customerInfo.orders[0].product;
+        vm.total = customerInfo.orderTotal;
+        vm.customer = customerInfo.name.toUpperCase();
 
     }
 }());
